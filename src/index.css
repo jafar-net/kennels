@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h5 {
+  color: rgba(68, 68, 190, 0.548)
+}
+
+h2 {
+  color: rgb(23, 23, 121)
+}
+
+div {
+  color:rgba(68, 68, 190, 0.548)
+}
+
+.welcome {
+  color: rgb(23, 23, 121)
+}
