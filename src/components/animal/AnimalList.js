@@ -1,30 +1,48 @@
-import React, { useState, useEffect } from 'react';
-//import the components we will need
+
+import React, { useEffect, useState } from 'react';
+import { getAllAnimals, deleteAnimal } from '../../modules/AnimalManager';
 import { AnimalCard } from './AnimalCard';
-import { getAllAnimals, getAnimalById } from '../../modules/AnimalManager';
+import { useHistory } from "react-router-dom"
 
 export const AnimalList = () => {
-  // The initial state is an empty array
-  const [animals, setAnimals] = useState([]);
+	console.log("AnimalList Invoked")
+	const [animals, setAnimals] = useState([])
 
-  const getAnimals = () => {
-    // After the data comes back from the API, we
-    //  use the setAnimals function to update state
-    return getAllAnimals().then(animalsFromAPI => {
-      setAnimals(animalsFromAPI)
-    });
-  };
+	const getAnimals = () => {
+		console.log("getAnimals Invoked")
+		return getAllAnimals().then(animalsFromAPI => {
+			// We'll do something more interesting with this data soon.
+			console.log(animalsFromAPI);
+			setAnimals(animalsFromAPI);
+		});
+	};
 
-  // got the animals from the API on the component's first render
-  useEffect(() => {
-    getAnimals();
-  }, []);
+	const handleDeleteAnimal = id => {
+		deleteAnimal(id)
+			.then(() => getAllAnimals().then(setAnimals));
+	};
 
-  // Finally we use .map() to "loop over" the animals array to show a list of animal cards
-  return (
-    <div className="container-cards">
-      {animals.map(animal => <AnimalCard key={animal.id} animal={animal}/>)}
-    </div>
-  );
+	const history = useHistory();
+
+	useEffect(() => {
+		console.log("useEffect Invoked")
+		getAnimals();
+	}, []);
+
+	return (
+		<>
+		<section className="section-content">
+  		<button type="button"
+      className="btn"
+      onClick={() => {history.push("/animals/create")}}>
+      Admit Animal
+  		</button>
+		</section>
+
+		<div className="container-cards">
+			{animals.map(animal =>
+				<AnimalCard key={animal.id} animal={animal} handleDeleteAnimal={handleDeleteAnimal} />)}
+		</div>
+		</>
+	);
 };
-

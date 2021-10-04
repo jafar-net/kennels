@@ -1,4 +1,4 @@
-const remoteURL = "http://localhost:5002"
+const remoteURL = "http://localhost:8088"
 
 export const getCustomerById = (customerId) => {
   //be sure your animals have good data and related to a location and customer
@@ -11,3 +11,8 @@ export const getAllCustomers = () => {
   .then(res => res.json())
 }
 
+export const deleteCustomer = (id) => {
+  return fetch(`${remoteURL}/customers/${id}`, {
+    method: "DELETE"
+  }).then(result => result.json())
+}

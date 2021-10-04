@@ -1,43 +1,104 @@
 {
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 2,
-            "name": "Michael Torres",
-            "address": "420 High Street"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Willie Hardigan",
-            "address": "314 Apple Drive"
-        },
-        {
-            "id": 2,
-            "name": "Austin Amelio",
-            "address": "566 Buttsoup Ave"
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "locationId": 1,
+      "customerId": 1
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Shepherd",
+      "locationId": 2,
+      "customerId": 2
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "locationId": 3,
+      "customerId": 3
+    },
+    {
+      "id": 4,
+      "name": "Lola",
+      "breed": "Perfect Baby Angel",
+      "locationId": 1,
+      "customerId": 1
+    },
+    {
+      "name": "Goliath",
+      "breed": "English Mastiff",
+      "locationId": 4,
+      "customerId": 4,
+      "id": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct",
+      "animalId": 1,
+      "locationId": 1
+    },
+    {
+      "id": 2,
+      "name": "Michael Torres",
+      "address": "420 High Street",
+      "animalId": 2,
+      "locationId": 2
+    },
+    {
+      "id": 3,
+      "name": "Barry McCauchner",
+      "address": "600 N Sershin Ave",
+      "animalId": 3,
+      "locationId": 3
+    },
+    {
+      "id": 4,
+      "name": "Ben Mosley",
+      "address": "109 Winstead Street",
+      "animalId": 4,
+      "locationId": 4,
+      "email": "bmosley1132@gmail.com"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Willie Hardigan",
+      "address": "314 Apple Drive"
+    },
+    {
+      "id": 2,
+      "name": "Austin Amelio",
+      "address": "566 Buttsoup Ave"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "209 Emory Drive"
+    },
+    {
+      "id": 3,
+      "name": "Nashville East",
+      "address": "239 Franklin Road"
+    },
+    {
+      "id": 4,
+      "name": "Nashville West",
+      "address": "6716 Charlotte Pike"
+    }
+  ]
 }
