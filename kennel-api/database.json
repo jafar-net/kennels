@@ -24,9 +24,9 @@
     {
       "id": 4,
       "name": "Lola",
-      "breed": "Perfect Baby Angel",
+      "breed": "Cockapoo",
       "locationId": 1,
-      "customerId": 1
+      "customerId": 5
     },
     {
       "name": "Goliath",
@@ -65,6 +65,14 @@
       "animalId": 4,
       "locationId": 4,
       "email": "bmosley1132@gmail.com"
+    },
+    { 
+      "id": 5,
+      "name": "Riley Hurd",
+      "address": "3415 Montview Drive",
+      "animalId": 5,
+      "locationId": 5,
+      "email": "rileyhurd@hotmail.com"
     }
   ],
   "employees": [

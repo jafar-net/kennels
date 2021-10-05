@@ -13,14 +13,7 @@ import { Register } from "./auth/Register"
 import { Redirect } from "react-router"
 import { AnimalEditForm } from "./animal/AnimalEditForm"
 
-export const ApplicationViews = ( {isAdmin, myUser} ) => {
-
-  const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
-
-const setAuthUser = (user) => {
-	sessionStorage.setItem("kennel_customer", JSON.stringify(user))
-	setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
-}
+export const ApplicationViews = ( {isAdmin, myUser, setAuthUser, isAuthenticated} ) => {
 
     return (
         <>
